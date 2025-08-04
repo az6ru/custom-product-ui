@@ -1,0 +1,248 @@
+/* ========================================
+   КАСТОМНЫЙ ВЫБОР МАТЕРИАЛА
+   ======================================== */
+
+.custom-material-wrapper {
+  font-family: Roboto, sans-serif;
+  margin-top: 20px;
+}
+
+.custom-material-label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #121212;
+  font-weight: 300;
+}
+
+.custom-material-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.material-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.2s ease;
+}
+
+.material-dot-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  transition: transform 0.2s ease;
+}
+
+.material-dot.active {
+  border-color: #121212;
+}
+
+.material-dot.active .material-dot-inner {
+  transform: scale(0.7);
+}
+
+/* ========================================
+   КАСТОМНЫЙ ВЫБОР РАЗМЕРОВ
+   ======================================== */
+
+.custom-line-sizes {
+  font-family: Roboto, sans-serif;
+  margin-top: 24px;
+}
+
+.custom-line-sizes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.custom-line-sizes-label {
+  color: #121212;
+  font-weight: 300;
+}
+
+.custom-line-sizes-guide {
+  color: #888;
+  font-weight: 300;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.custom-line-sizes-guide:hover {
+  color: #121212;
+}
+
+.custom-line-sizes-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.line-size {
+  font-size: 14px;
+  font-weight: 400;
+  color: #121212;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.line-size::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #121212;
+  transition: width 0.2s ease;
+}
+
+.line-size:hover::after {
+  width: 100%;
+}
+
+.line-size.active {
+  font-weight: 600;
+  color: #000;
+}
+
+.line-size.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* ========================================
+   БЛОК ПРЕИМУЩЕСТВ И ДОСТАВКИ
+   ======================================== */
+
+.custom-benefit-block {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: Roboto, sans-serif;
+}
+
+.custom-benefit-block .link-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 4px;
+}
+
+.custom-benefit-block .link-group a {
+  position: relative;
+  font-size: 14px;
+  color: #121212 !important;
+  text-decoration: none !important;
+  line-height: 1.4;
+  font-weight: 400;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+.custom-benefit-block .link-group a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #121212;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-benefit-block .link-group a:hover::after {
+  transform: scaleX(0);
+}
+
+.custom-benefit-block .delivery-info {
+  font-size: 14px;
+  color: #3a3a3a;
+  line-height: 1.6;
+}
+
+.custom-benefit-block .delivery-info p {
+  margin: 0 0 8px 0;
+}
+
+.custom-benefit-block .delivery-info ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.custom-benefit-block .delivery-info li {
+  margin-bottom: 6px;
+}
+
+/* ========================================
+   ЗАГОЛОВКИ И ТИТУЛЫ
+   ======================================== */
+
+/* Заголовок блока рекомендаций */
+.t-store__relevants__title {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 14px !important;
+    color: #121212 !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.5px !important;
+    margin: 120px 0 60px 0 !important;
+}
+
+/* Тайтл Десктоп */
+.uc-title .t-uptitle {
+    color: #121212;
+    letter-spacing: 0px;
+}
+.uc-title .t017__uptitle {
+    padding-top: 3px;
+    padding-bottom: 0px;
+}
+
+/* ========================================
+   КОНТЕЙНЕРЫ И ОТСТУПЫ
+   ======================================== */
+
+/* Контейнер сниппетов товаров */
+.t-store__prod-snippet__container {
+    padding-top: 80px;
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ
+   ======================================== */
+
+@media (max-width: 640px) {
+  .custom-benefit-block .link-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .custom-benefit-block .link-group a {
+    font-size: 16px;
+    padding-bottom: 3px;
+  }
+  
+  /* Тайтл Мобильный */
+  .uc-title .t-uptitle_md {
+      font-size: 42px;
+  }
+} 
